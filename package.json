@@ -34,6 +34,6 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@polymer/lit-element": "^0.6.2"
+    "lit-element": "^2.0.0-rc.5"
   }
 }
