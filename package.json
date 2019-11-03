@@ -17,13 +17,13 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-jest": "^23.2.0",
+    "babel-jest": "^24.9.0",
     "babel-preset-env": "^1.7.0",
-    "del": "^3.0.0",
-    "jest": "^23.2.0",
-    "rollup": "^0.66.6",
-    "rollup-plugin-babel": "^3.0.5",
-    "standard": "^12.0.1"
+    "del": "^5.1.0",
+    "jest": "^24.9.0",
+    "rollup": "^1.26.3",
+    "rollup-plugin-babel": "^4.3.3",
+    "standard": "^14.3.1"
   },
   "scripts": {
     "lint": "standard src test tools",
@@ -34,6 +34,6 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "lit-element": "^2.2.0"
+    "lit-element": "^2.2.1"
   }
 }
