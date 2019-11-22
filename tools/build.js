@@ -2,7 +2,6 @@
 
 const del = require('del')
 const rollup = require('rollup')
-const babel = require('rollup-plugin-babel')
 const pkg = require('../package.json')
 
 let promise = Promise.resolve()
@@ -20,10 +19,7 @@ const formats = ['es']
 formats.forEach((format) => {
   promise = promise.then(() => rollup.rollup({
     input: 'src/index.js',
-    external: Object.keys(dependencies),
-    plugins: [babel({
-      exclude: 'node_modules/**'
-    })]
+    external: Object.keys(dependencies)
   }).then(bundle => bundle.write({
     file: `dist/${outputName}.js`,
     format,
