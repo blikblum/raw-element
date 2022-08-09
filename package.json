@@ -1,6 +1,6 @@
 {
   "name": "raw-element",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A custom element base class with reactive properties",
   "repository": "blikblum/raw-element",
   "author": "Luiz Américo Pereira Câmara",
