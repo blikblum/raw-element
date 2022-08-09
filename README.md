@@ -1,10 +1,11 @@
 # Raw Element
 
-> Raw Element is a base custom element class with reactive properties but without a builtin render
+> Raw Element is a base custom element class with reactive properties and a no-op render method
 
 ### Features
 
 &nbsp; &nbsp; ✓ Based on UpdatingElement ([Lit](lit.dev) base class)<br>
+&nbsp; &nbsp; ✓ No rendering engine. Override render method to update element<br>
 
 ### Installation
 
