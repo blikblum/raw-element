@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module">
+    import { RawElement } from '../src/index.js'
+
+    class MyComponent extends RawElement {
+      static get properties() {
+        return {
+          title: { type: String },
+        };
+      }
+
+      render() {
+        this.renderRoot.innerHTML = `<div>${this.title}</div>`;
+      }
+    }
+
+    customElements.define("my-component", MyComponent);
+  </script>
+
+  <script>
+    function toggleTitle() {
+      document.querySelector('my-component').title = 'New title'
+    }
+  </script>
+  <title>Test Raw Element</title>
+</head>
+
+<body>
+  <button type="button" onclick="toggleTitle()">Toggle title</button>
+  <my-component title="Hello!"></my-component>
+</body>
+
+</html>

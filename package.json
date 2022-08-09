@@ -1,7 +1,7 @@
 {
   "name": "raw-element",
   "version": "0.3.0",
-  "description": "A project template for authoring and publishing JavaScript libraries",
+  "description": "A custom element base class with reactive properties",
   "repository": "blikblum/raw-element",
   "author": "Luiz Américo Pereira Câmara",
   "contributors": [
@@ -9,27 +9,28 @@
   ],
   "license": "MIT",
   "keywords": [],
-  "main": "dist/raw-element.js",
+  "main": "src/index.js",
+  "module": "src/index.js",
   "jest": {
     "modulePathIgnorePatterns": [
       "<rootDir>/dist/"
     ]
   },
   "devDependencies": {
+    "@web/dev-server": "^0.1.33",
     "del": "^5.1.0",
     "jest": "^24.9.0",
-    "rollup": "^1.27.3",
     "standard": "^14.3.1"
   },
   "scripts": {
     "lint": "standard src test tools",
+    "start": "web-dev-server --open example/ --node-resolve",
+    "start:watch": "web-dev-server --open example/ --node-resolve --watch",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:cover": "jest --coverage",
-    "build": "node tools/build",
-    "prepublishOnly": "npm run build"
+    "test:cover": "jest --coverage"
   },
   "dependencies": {
-    "lit-element": "^2.2.1"
+    "lit": "^2.2.8"
   }
 }
