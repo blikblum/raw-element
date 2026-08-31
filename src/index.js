@@ -7,10 +7,9 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import { UpdatingElement } from "lit";
-export * from "lit/decorators.js";
+import { ReactiveElement } from "@lit/reactive-element";
 
-export class RawElement extends UpdatingElement {
+export class RawElement extends ReactiveElement {
   /**
    * Updates the element. This method reflects property values to attributes
    * and calls `render` to render DOM
